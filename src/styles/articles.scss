@@ -1,0 +1,39 @@
+.articles {
+    display: flex;
+}
+
+.article-row {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1em;
+    border: 5px #ccc solid;
+    border-radius: 1em;
+    flex-grow: 1;
+    transition: all 0.5s;
+    animation: bounce 0.5s ease-in-out;
+
+    &:hover {
+        box-shadow: 0px 0px 15px #aaa;
+        flex-grow: 2;
+        transform: translate3d(0, 30px, 0);
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    img {
+        border-radius: 1em 1em 0 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .content {
+        padding: 1em;
+    }
+}
+
+@keyframes bounce {
+    from { transform: translate3d(0, 30px, 0);     }
+    to { transform: translate3d(0, 0, 0);     }
+}
